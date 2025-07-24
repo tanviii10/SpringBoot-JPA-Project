@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>Open New Account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+        }
+        .nav-link:hover {
+            background-color: #dceefc;
+        }
+    </style>
+</head>
+<body>
+<!-- Account Form -->
+<div class="form-container">
+    <h2 class="text-center mb-4 text-primary">Add New Account</h2>
+    <form action="/addacc" method="post">
+        <div class="mb-3">
+            <label for="accNo" class="form-label">Account Number</label>
+            <input type="number" class="form-control" id="accNo" name="accno" required>
+        </div>
+        <div class="mb-3">
+            <label for="accName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="accName" name="accnm" required>
+        </div>
+        <div class="mb-3">
+            <label for="accType" class="form-label">Account Type</label>
+            <select class="form-select" id="accType" name="acctype" required>
+                <option value="">Choose...</option>
+                <option value="saving">Saving</option>
+                <option value="current">Current</option>
+                <option value="fixed">Fixed</option>
+                <option value="ppf">PPF</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="balance" class="form-label">Balance</label>
+            <input type="number" class="form-control" id="balance" name="balance" required>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Submit</button>
+    </form>
+</div>
+
+
+</body>
+</html>
